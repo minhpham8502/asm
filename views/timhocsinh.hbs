@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h2>Add Student</h2>
+    {{!-- <select>
+        {{#each course}}
+          <option name="slug">{{coursename}}</option>
+        {{/each}}
+    </select> --}}
+  <form class="d-flex" method="post" action="/course/course/doAddStudent">
+  {{!-- <select>
+        {{#each course}}
+          <option value="" name="slug">{{coursename}}</option>
+        {{/each}}
+    </select> --}}
+         <input type="text"  value="" name="slug">Slug</option>
+    <div class="mt-4">
+            <div class="form-group">
+                <label for="coursename" >user name</label>
+                <input type="text" name="username" class="form-control"  >
+            </div>
+            <div class="form-group">
+                <label for="topic" >email</label>
+                <input type="text" name="email" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label for="topic" >password</label>
+                <input type="text" name="password" class="form-control" >
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+    </div>
+  </form>
+</tbody>
+
+</body>
+</html>
