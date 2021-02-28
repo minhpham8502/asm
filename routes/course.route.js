@@ -6,7 +6,7 @@ const { isEmail } = require('../middleware/index');
 
 const courseController = require('../controller/course.controller');
 // tương tác với course
-courseRoute.get('/course/chitiet:coursename', courseController.chitiet)
+
 // courseRoute.post('/course/chitiethoc', courseController.chitiethocsinh)
 
 
@@ -16,8 +16,8 @@ courseRoute.get('/:slug', courseController.detail)
 
 courseRoute.post('/course/search', courseController.search)
 
-courseRoute.use(checkAuth);
-courseRoute.use(checkAdmin);
+// courseRoute.use(checkAuth);
+// courseRoute.use(checkAdmin);
 
 courseRoute.get('/course/update:id',courseController.update)
 courseRoute.get('/course/create',courseController.create)
@@ -27,9 +27,10 @@ courseRoute.post('/doupdate:id', courseController.doupdate)
 courseRoute.post('/doCreate', courseController.docreate)
 
 
-// tương tác với học sinh
-courseRoute.get('/course/addStudent',courseController.addStudent)
-courseRoute.post('/course/doAddStudent', isEmail,courseController.doAddStudent)
+// // tương tác với học sinh
+// courseRoute.get('/course/addStudent',courseController.addStudent)
+// courseRoute.post('/course/doAddStudent', isEmail,courseController.doAddStudent)
+courseRoute.get('/allStudent/:slug',courseController.allstudent)
 
 
 module.exports = courseRoute;

@@ -11,7 +11,7 @@
         <div class="container-fluid">
             <a class="navbar-brand" style="color: white;">Navbar</a>
             <a href="/course/course/create" class="navbar-brand" style="color: white;">Create</a>
-            <a href="/course/course/addStudent" class="navbar-brand" style="color: white;">Create student</a>
+            <a href="/student/addStudent" class="navbar-brand" style="color: white;">Create student</a>
 
             
         <form class="d-flex" method="post" action="./course/search">
@@ -32,7 +32,7 @@
                                 <h5 class="card-title">{{coursename}}</h5>
                             </a>                        
                         <p class="card-text">{{topic}}.</p>
-                        <a href="/course/course/chitiet{{coursename}}" class="btn btn-primary">Chi tiết</a>
+                        <a href="/course/allStudent/{{slug}}" class="btn btn-primary">Chi tiết</a>
                     </div>
                 </div>
             </div>

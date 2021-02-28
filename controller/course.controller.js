@@ -122,7 +122,7 @@ class CourseController {
 
     addStudent(req,res){
         CourseModel.find(function(err,data){
-            res.render('timhocsinh',{course:data})    
+            res.render('./student/course_student',{course:data})    
     })
     }
     // dotimhocsinh(req,res){
@@ -156,32 +156,15 @@ class CourseController {
                             res.json(data)
                         }
                     })
-                
-                // newStudent.save(function(err){
-                //     if(err){
-                //         res.json({"mess":err})
-                //     }else{
-                //         CourseModel.findOneAndUpdate({_id:req.body.danhsach},{$push:{student:newStudent._id}},function(err){
-                //           if(err){
-                //             console.log("-------------------------------------")
-                //             console.log(err)
-                //           }else{
-                              
-                //             //   res.render('./course/addstudent',{course:data})
-                //             res.json('ok')
-                //           }
-                //       })
-                //     }
-                // })    
 
     }
 
-    chitiet(req,res){
-        let coursename = req.params.coursename
+    allstudent(req,res){
+        let slug = req.params.slug
       AccountModel.find({
-          coursename: coursename
+          slug: slug
       }).then(data=>{
-      res.json(data)
+      res.render('./student/allstudent',{account: data})
 
       })
     }

@@ -8,18 +8,12 @@
 </head>
 <body>
   <h2>Add Student</h2>
-    {{!-- <select>
+  <form class="d-flex" method="post" action="/student/doAddStudent">
+    <select name="slug">
         {{#each course}}
-          <option name="slug">{{coursename}}</option>
+          <option value="{{coursename}}" name="slug">{{coursename}}</option>
         {{/each}}
-    </select> --}}
-  <form class="d-flex" method="post" action="/course/course/doAddStudent">
-  {{!-- <select>
-        {{#each course}}
-          <option value="" name="slug">{{coursename}}</option>
-        {{/each}}
-    </select> --}}
-         <input type="text"  value="" name="slug">Slug</option>
+    </select>
     <div class="mt-4">
             <div class="form-group">
                 <label for="coursename" >user name</label>
@@ -34,7 +28,6 @@
                 <input type="text" name="password" class="form-control" >
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
-
     </div>
   </form>
 </tbody>
